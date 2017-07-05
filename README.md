@@ -1,4 +1,4 @@
-# CDF Media UI Module (@cdf/cdf-ng-media)
+# CDF Media UI Module (@titoagudelo/cdf-media)
 [![version][npm-image]][npm-url]
 [![downloads][downloads-image]][downloads-url]
 
@@ -12,7 +12,7 @@
 CDF-NG-MEDIA requires the latest version of Angular (at the time of this writing: 2.4.7).
 ```sh
   //package.json
-  
+
   "dependencies": {
     "@angular/common": "2.4.7",
     "@angular/compiler": "2.4.7",
@@ -39,13 +39,13 @@ CDF-NG-MEDIA requires a JW Player key in order for JW Player to work correctly. 
 ```sh
     //STEP 1: INSTALL CDF-NG-MEDIA
 
-    npm install @cdf/cdf-ng-media --save
+    npm install @titoagudelo/cdf-media --save
 
 ...................................................
 
     //STEP 2: create a config file (cdf-media-config.ts) to provide configuration settings:
 
-    import { ConfigInterface } from '@cdf/cdf-ng-media/lib';
+    import { ConfigInterface } from '@titoagudelo/cdf-media/lib';
 
     export const CdfMediaConfig: ConfigInterface =
       {
@@ -58,7 +58,7 @@ CDF-NG-MEDIA requires a JW Player key in order for JW Player to work correctly. 
     // app.module.ts
     import { CdfModule } from '@cdf/cdf-ng/lib';
     import { CdfMediaConfig } from './configs';
-    
+
     @NgModule({
       declarations: [ ... ],
       imports: [
@@ -70,7 +70,7 @@ CDF-NG-MEDIA requires a JW Player key in order for JW Player to work correctly. 
       bootstrap: [ ... ]
     })
     export class AppModule { }
-    
+
 ```
 
 
@@ -91,13 +91,13 @@ CdfMediaModel is the model that contains data about the media asset (image and/o
 	YouTubeId: string;
 	VideoList: CdfVideoModel[] = [];
 	HasImage: boolean = false;
-	HasVideo: boolean = false;  
+	HasVideo: boolean = false;
 ```
   * Type can be used to apply a label ontop of the media asset (perfect for a collection of media assets of different types)
   * ImageUri is the complete http URL to an image
   * YouTubeId is the unique value representing a YouTube video (ex. 8geR0yacozY)
   * VideoList is an optional collection of URIs to different videos.  This is a placeholder for future functionality
-  
+
 ## *CdfVideoModel*
 CdfVideoModel is a placeholder data model for future development.
 
@@ -121,7 +121,7 @@ CDF-NG-MEDIA containes the following components you can use:
 ![][cdf-ng-media-slider-video-url]
 
 ```sh
-<cdf-media-slider [mediaModelList]="mediaModelList" 
+<cdf-media-slider [mediaModelList]="mediaModelList"
     [showType]="showType"
     [showTitle]="showTitle"
     [showDescription]="showDescription"
@@ -129,7 +129,7 @@ CDF-NG-MEDIA containes the following components you can use:
 ```
 
 
-## CdfVideoBackgroundComponent 
+## CdfVideoBackgroundComponent
 **CdfVideoBackgroundComponent** uses JW Player's capability to run a video contained in CdfMediaModel in the background.
 
 
